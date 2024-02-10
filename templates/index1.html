@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div class="name">
+        <h1 class="marathi">झेरॉक्स</h1>
+        <h2 class="line1">Print On Click</h2>
+    </div>
+    <div class="images">
+        <div>
+            <img src="{{ url_for('static', filename='images/xerox2.png') }}" alt="" width="100%" height="100%">
+        </div>
+    </div>
+    <div class="text">
+       <div class="text2">
+        <h3>Upload your file to print</h3>
+        <h4 style="color: green;">Free Home Delivery...!</h4>
+       </div>
+       <div class="rate1">
+        <h1>Rate</h1>
+        <h3>Black & White print:- ₹2 per page  </h3>
+        <h3>Colour Print :- ₹5  per page </h3>
+       </div>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+
+    <form  class="choice" method="post" enctype="multipart/form-data">
+        <label for="pdf_file">Choose a PDF file:</label>
+        <input class="file1" type="file" name="pdf_file" accept=".pdf" required>
+        <label for="print">Choose a colour:</label>
+        <select id="print" name="print">
+            <option value="black & White">Black & White</option>
+            <option value="Colour">Colour</option>
+        </select>
+        <button type="submit">Upload</button>
+    </form> 
+        {% for x,y in list1 %}
+    <div class="bar1">
+        <div class="bar1-inside">
+            <div class="bar1-icon">
+                <i class="fa fa-file-pdf-o" ></i>
+            </div>
+            
+            <div class="bar1-filename">
+                <div class="bar1-filename-font">
+                <h5 >File Name :-  <p>{{x[:50]}}</p></h5>
+                <h5>Total page :-{{ y }}</h5>
+                <h5>balck & White print({{ y }} x 2)= ₹{{y*2}}.00</h5>
+                </div>
+            </div>
+            <div class="bar1-price">price
+                {% if y>=100  %}
+                <p class="deals-value"><span><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₹</span>{{y}}.00</span></span></p>
+                <h4 style="color: green;">₹ {{(y*2)-10}}.00</h4>
+                {% else %}
+                <h4 style="color: green;">₹ {{y*2}}.00</h4>
+                {% endif %}
+            </div>
+            
+        </div>
+    </div>
+        {% endfor %}
+        <!-- add one more file -->
+        {% if total %}
+        <div class="bar1">
+            <div class="bar1-inside1">
+                <div class="bar1-filename">
+                    
+                </div>
+                <div class="bar1-price"><h3>TOTAL</h3>
+                    <h4 style="color: green;">₹ {{total}}.00</h4>
+                </div>
+            </div>
+            {% endif %}
+
+        <!-- add many more file here -->
+        
+       </div>
+       
+    </div>
+</body>
+</html>

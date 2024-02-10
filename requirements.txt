@@ -1,0 +1,8 @@
+Flask 
+requests 
+gunicorn 
+flask
+bs4
+pyPDF2
+os
+PdfReader

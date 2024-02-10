@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Page Counter</title>
+</head>
+<body>
+    <h1>PDF Page Counter</h1>
+    
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form  class="choice" method="post" enctype="multipart/form-data">
+        <label for="pdf_file">Choose a PDF file:</label>
+        <input type="file" name="pdf_file" accept=".pdf" required>
+        <label for="print">Choose a colour:</label>
+        <select id="print" name="print">
+            <option value="black & White">Black & White</option>
+            <option value="Colour">Colour</option>
+        </select>
+        <button type="submit">Upload</button>
+    </form>
+
+    <!-- {% if num_pages is defined %} -->
+        <p>Number of pages in {{ file_name }}: {{ num_pages }}</p>
+    <!-- {% endif %} -->
+</body>
+</html>

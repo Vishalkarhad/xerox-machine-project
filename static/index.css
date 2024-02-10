@@ -1,0 +1,220 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.name{
+    background-color: #fcba03;
+    color: black;
+    width: 100%;
+    height: 110px;
+}
+.marathi{
+ text-align: center;
+ font-size: 50px;
+ padding-top: 10px;
+
+}
+.line1{
+    text-align: center;
+    color: red;
+}
+.images{
+    
+    float: left;
+    /* border: 2px solid black; */
+    width: 40%;
+    height: 550px;
+}
+.text{
+    float: left;
+    /* border: 2px solid black; */
+    width: 50%;
+    height: 550px;
+    
+}
+.bar1{
+    position: relative;
+    /* border: 2px solid black; */
+    margin-top: 10px;
+    width: auto;
+    height: 100px;
+    
+}
+.text2{
+    text-align: center;
+    font-size: 40px;
+    color: brown;
+}
+.rate1{
+    text-align: center;
+}
+.choice{
+    padding-top: 30px;
+    text-align: center;
+}
+.bar1-inside{
+    position: relative;
+    background-color: rgb(242, 234, 224);
+    box-shadow: 1px 2px 5px rgb(208, 191, 191);
+    /* border: 2px solid black; */
+    margin: 10px;
+    height: 80%;
+}
+.bar1-icon{
+    /* background-color: #fcba03; */
+    float: left;
+    /* border: 2px solid black; */
+    padding-top: 15px;
+    padding-left: 20px;
+
+}
+.bar1-filename{
+    float: left;
+    margin-left: 10px;
+    padding-top: 10px;
+    /* border: 2px solid black; */
+    width: 350px;
+    height: 60px;
+}
+.bar1-filename-font{
+    font-size: 15px;
+}
+.bar1-price{
+    float: left;
+    /* border: 2px solid black; */
+    padding-top: 10px;
+    margin-left: 120px;
+    
+
+}
+
+.bar1-inside1{
+    position: relative;
+    background-color: rgb(231, 157, 66);
+    box-shadow: 1px 2px 5px rgb(208, 191, 191);
+    /* border: 2px solid black; */
+    margin: 10px;
+    height: 50%;
+}
+.fa fa-file-pdf-o{
+    font-size: 48px;
+    color: red;
+}
+.deals-value .amount {text-decoration: line-through;}
+.woocommerce-Price-currencySymbol {margin-right: 10px;}
+
+
+/* Add this to your existing CSS file or create a new one */
+
+/* Default styling for larger screens */
+body {
+    font-size: 16px;
+}
+
+/* Media query for smaller screens, such as mobile phones */
+@media only screen and (max-width: 360px) {
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .name {
+        text-align: center; /* Center-align the heading on smaller screens */
+    }
+
+    .images img {
+        width: 100%; /* Make images fill the width of the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .text {
+        padding: 10px; /* Add padding to the text container for better readability */
+    }
+
+    .bar1 {
+        flex-direction: column; /* Stack items vertically for better display on small screens */
+    }
+    .name{
+        background-color: #fcba03;
+        color: black;
+        width: 100%;
+        height: 50px;
+    }
+    .marathi{
+        text-align: center;
+        font-size: 20px;
+        padding-top: 10px;
+       
+       }
+       .line1{
+        text-align: center;
+        color: red;
+        font-size: 10px;
+}
+.text{
+    float: left;
+    /* border: 2px solid black; */
+    width: 50%;
+    height: 550px;
+    margin-left: -20px;
+}
+.text2{
+    text-align: center;
+    font-size: 10px;
+    color: brown;
+}
+.rate1{
+    text-align: center;
+    font-size: 5px;
+}
+.choice{
+    margin-top: -27px;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 10px;
+    
+}
+.bar1-inside{
+    position: relative;
+    background-color: rgb(242, 234, 224);
+    box-shadow: 1px 2px 5px rgb(208, 191, 191);
+    /* border: 2px solid black; */
+    margin: 10px;
+    width: 60%;
+    height: 40%;
+}
+.fa fa-file-pdf-o{
+    font-size: 30px;
+    color: red;
+    font-size: 10px;
+}
+.bar1-icon{
+    /* background-color: #fcba03; */
+    float: left;
+    /* border: 2px solid black; */
+    padding-top: 1px;
+    padding-left: 1px;
+    height: 10%;
+    width: 20%;
+    
+
+}
+.bar1{
+    position: absolute;
+    /* border: 2px solid black; */
+    margin-top: 10px;
+    width: 100%;
+    height: 120px;
+    
+}
+.bar1-filename{
+    float: left;
+    margin-left: 10px;
+    padding-top: 10px;
+    /* border: 2px solid black; */
+    width: 350px;
+    height: 60px;
+}
+.bar1-filename-font{
+    font-size: 5px;
+}
+}
